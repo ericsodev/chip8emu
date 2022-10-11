@@ -20,7 +20,7 @@ public class Display extends Canvas {
                 if (pixels[y][x]) {
                     gc.setFill(Color.WHITE);
                 } else {
-                    gc.setFill(Color.BLACK);
+                    gc.setFill(Color.PURPLE);
                 }
                 gc.fillRect(x * 10, y * 10, 10, 10);
             }

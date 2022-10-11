@@ -34,7 +34,7 @@ public class Main extends Application {
             activeKeys.remove(e.getCode().getCode());
         });
         Emulator cpu = new Emulator(activeKeys);
-        cpu.loadFile("snake.ch8");
+        cpu.loadFile("roms/spaceinvaders.ch8");
         ScheduledFuture<?> cpuThread = pool.scheduleWithFixedDelay(cpu::cycle, 0, 1, TimeUnit.MILLISECONDS);
         ScheduledFuture<?> timerThread = pool.scheduleWithFixedDelay(() -> {
             if (cpu.getDelayTimer() > 0) cpu.decrementDelayTimer();
